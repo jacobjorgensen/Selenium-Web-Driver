@@ -24,3 +24,12 @@ In the pom.xml file the following block needs to be added:
 For more information about what needs to be included in the pom.xml file for your sepecific 
 implementation follow the following link: http://docs.seleniumhq.org/download/maven.jsp
 Additionally, for a full list of Selenium dependancies available for use with Maven vist: https://mvnrepository.com/search?q=selenium
+
+For use with Google Chrome you will need to download the ChromeDriver.exe file which can be found at: https://sites.google.com/a/chromium.org/chromedriver/downloads
+
+I recommend dropping the ChromeDriver.exe file into a files directory in the Java project as can be seen in the file structure. 
+From there you need to point to the file when the program launches. 
+This can be done with the following code segment: 
+```
+    System.setProperty("webdriver.chrome.driver", "files/chromedriver.exe");
+```
